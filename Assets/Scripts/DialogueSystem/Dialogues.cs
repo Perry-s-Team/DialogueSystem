@@ -98,5 +98,8 @@ public class Dialogues : MonoBehaviour
     {
         DialogPlay = false;
         dialoguePanel.SetActive(false);
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (nextSceneIndex <= SceneManager.sceneCount)
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }
